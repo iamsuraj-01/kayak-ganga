@@ -74,7 +74,6 @@ h6 {
     padding: 0 0 10px 0;
     font-weight: normal;
     line-height: normal;
-    color: #111111;
     margin: 0
 }
 
@@ -400,6 +399,85 @@ button {
 
 /* banner section end */
 
+/* achievements section start */
+
+.achievements_section {
+    width: 100%;
+    float: left;
+    padding-bottom: 90px;
+}
+
+.achievements_taital {
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #1f1f1f;
+    font-weight: bold;
+}
+
+.achievements_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #1f1f1f;
+    margin: 0px;
+}
+
+.achievements_section_2 {
+    width: 100%;
+    float: left;
+    margin-top: 90px;
+}
+
+.achievements_img {
+    width: 100%;
+    float: left;
+    text-align: center;
+    transition: transform 0.4s ease-in-out; /* Smooth zoom effect */
+}
+
+.achievement_card {
+    margin-bottom: 30px; /* Additional styling for card-based layouts */
+}
+
+/* New Styling for Hover Effect */
+.achievement_img_wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement_img_wrapper:hover .achievements_img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.achievement_hover_text {
+    position: absolute;
+    bottom: 0;
+    left: -100%; /* Initially hidden off-screen */
+    width: 100%;
+    background-color: #2b2278; /* Theme color */
+    color: #fff; /* Text color */
+    text-align: center;
+    padding: 10px;
+    transition: all 0.5s ease-in-out; /* Slide animation */
+}
+
+.achievement_img_wrapper:hover .achievement_hover_text {
+    left: 0; /* Slide in from left to right */
+}
+
+.achievement_hover_title {
+    margin: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+
+/* achievements section end */
+
+
 
 /* services section start */
 
@@ -503,13 +581,14 @@ button {
     font-size: 16px;
     color: #1f1f1f;
     margin: 0px;
-    padding-top: 40px;
+    padding-top: 10px;
+    text-align: justify;
 }
 
 .readmore_bt {
     width: 170px;
     float: left;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .readmore_bt a {
