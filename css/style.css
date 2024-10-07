@@ -132,6 +132,14 @@ ol {
     list-style: none;
 }
 
+.bg-theme {
+    background-color: #0077b6;
+}
+
+.text-theme {
+    color: #0077b6;
+}
+
 p {
     margin: 20px;
     font-weight: 300;
