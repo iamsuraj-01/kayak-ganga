@@ -138,8 +138,11 @@
                </p>
             </div>
          </div>
-         <div class="col-md-6 padding_right_0">
-            <div><img src="images/about-img.png" class="about_img" alt="Kayak Ganga Team"></div> <!-- Updated image reference and alt text -->
+         <div class="col-md-6 about_img_container">
+            <img src="images/about-img.png" class="about_img" alt="Kayak Ganga Team">
+            <div class="about_play_icon_main">
+               <div class="about_play_icon"><a href="https://youtu.be/h4m1eBPxIvU?si=6IUJfJnuQ3UTIs6k" target="_blank"><img src="images/play-icon.png" alt="Watch Video"></a></div> <!-- Linked to the YouTube channel and updated alt text -->
+            </div>
          </div>
       </div>
    </div>
@@ -315,17 +318,141 @@
 </div>
 <!-- services section end -->
 
-  <!-- blog section start -->
+  <!-- blog section start --
   <div class="blog_section layout_padding">
    <div class="container">
-      <h1 class="blog_taital">Watch Priyanka in Action</h1> <!-- Updated heading to be more engaging -->
-      <p class="blog_text">Explore thrilling whitewater adventures, kayaking tutorials, and breathtaking moments captured during Priyanka's journeys on the Ganga River.</p> <!-- Customized text to match Priyanka's theme -->
+      <h1 class="blog_taital">Watch Priyanka in Action</h1> 
+      <p class="blog_text">Explore thrilling whitewater adventures, kayaking tutorials, and breathtaking moments captured during Priyanka's journeys on the Ganga River.</p> 
       <div class="play_icon_main">
-         <div class="play_icon"><a href="https://youtu.be/h4m1eBPxIvU?si=6IUJfJnuQ3UTIs6k" target="_blank"><img src="images/play-icon.png" alt="Watch Video"></a></div> <!-- Linked to the YouTube channel and updated alt text -->
+         <div class="play_icon"><a href="https://youtu.be/h4m1eBPxIvU?si=6IUJfJnuQ3UTIs6k" target="_blank"><img src="images/play-icon.png" alt="Watch Video"></a></div> 
       </div>
    </div>
 </div>
 <!-- blog section end -->
+
+<!-- package section start -->
+<div class="blog_section layout_padding">
+   <div class="container">
+       <h1 class="blog_taital">Explore Our Packages</h1>
+       <p class="blog_text">Choose from our range of kayaking packages tailored for different skill levels.</p>
+       
+       <!-- Grid Layout for larger screens -->
+       <div class="row d-none d-md-flex mt-4">
+           <!-- Package 1 -->
+           <div class="col-md-4">
+               <div class="card">
+                   <img src="https://campgangavatika.com/img/act/rafting-3.jpg" class="card-img-top" alt="Beginner Package">
+                   <div class="card-body">
+                       <h5 class="card-title">Beginner Package</h5>
+                       <ul class="package-info">
+                           <li><span class="icon">❯</span> Rafting Points: Marine Drive to Shivpuri</li>
+                           <li><span class="icon">❯</span> Distance: 10 Kms</li>
+                           <li><span class="icon">❯</span> Rapid Grades: I, II, III</li>
+                           <li><span class="icon">❯</span> Best Season: October to June</li>
+                       </ul>
+                       <a href="#" class="btn btn-primary">Learn More</a>
+                   </div>
+               </div>
+           </div>
+           <!-- Package 2 -->
+           <div class="col-md-4">
+               <div class="card">
+                   <img src="https://campgangavatika.com/img/act/rafting-1.jpg" class="card-img-top" alt="Adventure Package">
+                   <div class="card-body">
+                       <h5 class="card-title">Adventure Package</h5>
+                       <ul class="package-info">
+                           <li><span class="icon">❯</span> Rafting Points: Shivpuri to Rishikesh</li>
+                           <li><span class="icon">❯</span> Distance: 16 Kms</li>
+                           <li><span class="icon">❯</span> Rapid Grades: I, II, III, III+</li>
+                           <li><span class="icon">❯</span> Best Season: October to June</li>
+                       </ul>
+                       <a href="#" class="btn btn-primary">Learn More</a>
+                   </div>
+               </div>
+           </div>
+           <!-- Package 3 -->
+           <div class="col-md-4">
+               <div class="card">
+                   <img src="https://campgangavatika.com/img/act/rafting-2.jpg" class="card-img-top" alt="Pro Explorer Package">
+                   <div class="card-body">
+                       <h5 class="card-title">Pro Explorer Package</h5>
+                       <ul class="package-info">
+                           <li><span class="icon">❯</span> Rafting Points: Marine Drive to Rishikesh</li>
+                           <li><span class="icon">❯</span> Distance: 26 Kms</li>
+                           <li><span class="icon">❯</span> Rapid Grades: I, II, III, IV</li>
+                           <li><span class="icon">❯</span> Contact us to know the discounted price</li>
+                       </ul>
+                       <a href="#" class="btn btn-primary">Learn More</a>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <!-- Carousel for mobile screens (Bootstrap 4.1) -->
+       <div id="mobileCarousel" class="carousel slide d-md-none mt-4" data-ride="carousel">
+           <div class="carousel-inner">
+               <!-- Each item in the carousel for mobile, Package 1 -->
+               <div class="carousel-item active">
+                   <div class="card">
+                       <img src="https://campgangavatika.com/img/act/rafting-3.jpg" class="card-img-top" alt="Beginner Package">
+                       <div class="card-body">
+                           <h5 class="card-title">Beginner Package</h5>
+                           <ul class="package-info">
+                               <li><span class="icon">❯</span> Rafting Points: Marine Drive to Shivpuri</li>
+                               <li><span class="icon">❯</span> Distance: 10 Kms</li>
+                               <li><span class="icon">❯</span> Rapid Grades: I, II, III</li>
+                               <li><span class="icon">❯</span> Best Season: October to June</li>
+                           </ul>
+                           <a href="#" class="btn btn-primary">Learn More</a>
+                       </div>
+                   </div>
+               </div>
+               <!-- Package 2 -->
+               <div class="carousel-item">
+                   <div class="card">
+                       <img src="https://campgangavatika.com/img/act/rafting-1.jpg" class="card-img-top" alt="Adventure Package">
+                       <div class="card-body">
+                           <h5 class="card-title">Adventure Package</h5>
+                           <ul class="package-info">
+                               <li><span class="icon">❯</span> Rafting Points: Shivpuri to Rishikesh</li>
+                               <li><span class="icon">❯</span> Distance: 16 Kms</li>
+                               <li><span class="icon">❯</span> Rapid Grades: I, II, III, III+</li>
+                               <li><span class="icon">❯</span> Best Season: October to June</li>
+                           </ul>
+                           <a href="#" class="btn btn-primary">Learn More</a>
+                       </div>
+                   </div>
+               </div>
+               <!-- Package 3 -->
+               <div class="carousel-item">
+                   <div class="card">
+                       <img src="https://campgangavatika.com/img/act/rafting-2.jpg" class="card-img-top" alt="Pro Explorer Package">
+                       <div class="card-body">
+                           <h5 class="card-title">Pro Explorer Package</h5>
+                           <ul class="package-info">
+                               <li><span class="icon">❯</span> Rafting Points: Marine Drive to Rishikesh</li>
+                               <li><span class="icon">❯</span> Distance: 26 Kms</li>
+                               <li><span class="icon">❯</span> Rapid Grades: I, II, III, IV</li>
+                               <li><span class="icon">❯</span> Contact us to know the discounted price</li>
+                           </ul>
+                           <a href="#" class="btn btn-primary">Send</a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <a class="carousel-control-prev" href="#mobileCarousel" role="button" data-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+           </a>
+           <a class="carousel-control-next" href="#mobileCarousel" role="button" data-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+           </a>
+       </div>
+   </div>
+</div>
+<!-- package section end -->
+
+
+
 
 <!-- client section start -->
 <div class="client_section layout_padding" id="testimonial">

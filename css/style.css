@@ -593,37 +593,139 @@ button {
     text-align: justify;
 }
 
-.readmore_bt {
-    width: 170px;
-    float: left;
-    margin-top: 30px;
-}
-
-.readmore_bt a {
-    width: 100%;
-    float: left;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #000d10;
-    text-align: center;
-    padding: 10px 0px;
-    border-radius: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.readmore_bt a:hover {
-    color: #ffffff;
-    background-color: #0077b6;
+.about_img_container {
+    position: relative; /* This container is the reference for the play button positioning */
+    width: 100%; /* Make sure the container takes full width */
+    padding-right: 0px;
 }
 
 .about_img {
-    width: 100%;
-    float: left;
+    width: 100%; /* Ensure the image takes full width of its container */
+    display: block; /* Removes any additional space below the image */
+}
+
+.about_play_icon_main {
+    position: absolute; /* Absolute position relative to its parent, which is .about_img_container */
+    top: 50%; /* Centers vertically */
+    left: 55%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Offset the position to achieve true centering */
+    width: 200px; /* Define a specific size if needed */
+    height: 200px; /* Maintain aspect ratio or size as per design */
+    display: flex; /* Helps center the content inside */
+    justify-content: center;
+    align-items: center;
+}
+
+.about_play_icon {
+    width: 200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.about_play_icon::before {
+    content: '';
+    position: absolute;
+    top: 49%;
+    left: 70px;
+    width: 130px;
+    height: 130px;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 100%;
+    z-index: -1;
+    animation: fadeEffect 1.3s infinite ease;
+    box-shadow: 0px 0px 10px 0px;
+    right: inherit;
+}
+
+.margin_top_90{
+    margin-top: 90px;
+}
+
+@keyframes fadeEffect {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
 }
 
 
-/* contact section end */
+/* package section start */
+
+.blog_section {
+    width: 100%;
+    float: left;
+    background-image: url(../images/blog-bg.png);
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-bottom: 345px;
+    padding-top: 200px;
+}
+
+.blog_taital {
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: bold;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.blog_text {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #ffffff;
+    padding-top: 40px;
+    text-align: center;
+}
+
+/* Additional styles for package cards */
+.card {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    border: none; /* Removes the default card border */
+    color: #ffffff; /* White text color for better visibility */
+}
+
+.card-img-top {
+    opacity: 1; /* Slightly see-through images to blend with the dark background */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.card-img-top:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+
+.card-body {
+    padding: 20px; /* Provides padding inside the card */
+}
+
+.card-title {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Theme primary color for buttons */
+    border: none; /* No border for a cleaner button look */
+}
+
+/* Hover effect to lift cards */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow for lifted effect */
+}
+
+
+
+/* package section end */
 
 
 /* blog section start */
