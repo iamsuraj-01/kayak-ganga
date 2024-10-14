@@ -1,0 +1,762 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap");
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", "Roboto", sans-serif;
+}
+
+  
+/* Theme Variables */
+$theme: #0077b6; // theme color
+$theme-secondary: #000; // Secondary theme color
+$white: #FFFFFF; // White color
+$dark: #212529; // Dark color
+
+/* Background Colors */
+.bg-theme {
+    background: $theme;
+}
+.bg-secondary-theme {
+    background: $theme-secondary;
+}
+
+/* Text Colors */
+.text-theme {
+    color: $theme;
+}
+.text-secondary-theme {
+    color: $theme-secondary;
+}
+
+/* Text Alignment */
+.text-justify {
+    text-align: justify;
+}
+.text-last-left {
+    text-align-last: left;
+}
+.text-last-center {
+    text-align-last: center;
+}
+.text-last-right {
+    text-align-last: right;
+}
+
+/* Letter-Spacing */
+.ls-1 {
+    letter-spacing: 0.1rem;
+}
+
+.ls-2 {
+    letter-spacing: 0.2rem;
+}
+
+.ls-3 {
+    letter-spacing: 0.3rem;
+}
+
+.ls-4 {
+    letter-spacing: 0.4rem;
+}
+
+.ls-5 {
+    letter-spacing: 0.5rem;
+}
+
+/* Line-Height */
+.lh-1 {
+    line-height: 1;
+}
+
+.lh-1-25 {
+    line-height: 1.25;
+}
+
+.lh-1-5 {
+    line-height: 1.5;
+}
+
+.lh-1-75 {
+    line-height: 1.75;
+}
+
+.lh-2 {
+    line-height: 2;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+}
+
+/* Buttons */
+.btn {
+    font-weight: 600;
+}
+
+.btn-theme {
+    color: $white;
+    background-color: $theme;
+    border-color: $theme;
+
+    &:hover {
+        color: $white;
+        background-color: $theme-secondary;
+        border-color: $theme-secondary;
+    }
+}
+
+.btn-square, .btn-sm-square, .btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 30px;
+    height: 30px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+/* Back To Top Button */
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 20px;
+    z-index: 99;
+}
+
+/* Forms */
+.form-control {
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+/* Water Effect Spinner */
+.water-spinner {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    z-index: 99999;
+
+    .wave {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 5px solid rgba(0, 162, 232, 0.5); /* Water blue ripple color */
+        animation: wave-animation 1.5s infinite ease-in-out;
+        opacity: 0;
+    }
+
+    .wave:nth-child(1) {
+        animation-delay: 0s;
+    }
+    
+    .wave:nth-child(2) {
+        animation-delay: 0.5s;
+    }
+    
+    .wave:nth-child(3) {
+        animation-delay: 1s;
+    }
+}
+
+/* Water Ripple Animation */
+@keyframes wave-animation {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Spinner Visibility */
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+    z-index: 99999;
+
+    &.show {
+        transition: opacity 0.5s ease-out, visibility 0s linear 0s;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+// Hide the previous and next buttons of the carousel
+.carousel-control-prev,
+.carousel-control-next {
+    display: none !important;
+}
+
+
+/* Section Title */
+.section-title {
+    position: relative;
+    padding-bottom: 10px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100px; /* Adjust Bottom line */
+        height: 3px;
+        bottom: 0;
+        left: 0; /* Start from the left */
+        background: $theme;
+        border-radius: 2px;
+    }
+
+    &.text-center::before {
+        left: 50%; /* Center it when the content is centered */
+        transform: translateX(-50%);
+    }
+}
+
+/* Hover Effects */
+
+/* Fill Hover Effect */
+.hover-fill {
+    transition: 0.5s;
+    box-shadow: inset 0 0 0 50px transparent;
+    &:hover {
+        box-shadow: inset 0 0 0 0 $theme;
+    }
+}
+/* Zoom In Effect */
+.hover-zoom {
+    transition: 0.5s;
+    &:hover {
+        transform: scale(1.06);
+    }
+}
+
+/* Navbar */
+.navbar {
+    .navbar-brand img {
+        width: 100px;
+        height: auto;
+        max-width: 100%;
+        pointer-events: none; /* Prevents clicking to protect logo from being downloaded */
+    }
+
+    .navbar-nav {
+        .nav-link {
+            position: relative;
+            margin-left: 25px;
+            padding: 35px 0;
+            color: $white;
+            font-size: 18px;
+            font-weight: 600;
+            outline: none;
+            transition: .5s;
+
+            &:hover,
+            &.active {
+                color: $theme;
+            }
+        }
+        .show > .nav-link {
+            color: $theme;
+        }
+    }
+
+    .navbar-toggler {
+        color: $theme !important;
+        border-color: $theme !important;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+.sticky-top.navbar {
+    .navbar-nav {
+        .nav-link {
+            padding: 20px 0;
+            color: $dark;
+
+            &:hover,
+            &.active {
+                color: $theme;
+            }
+        }
+    }
+}
+
+/* Landing Page Start */
+
+/* Banner */
+#banner {
+    position: relative;
+    height: 1000px; // Adjust height as needed
+    overflow: hidden;
+    background-image: url('/img/banner-bg.png'); // Add your background image here
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // Dark semi-transparent background background: rgba(9, 30, 62, 0.2); 
+        z-index: 1;
+    }
+
+    .banner-caption {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 2;
+        width: 80%; // Ensure it scales well on different screen sizes
+        padding: 0 15px;
+
+        h1 {
+            font-size: 4.5rem;
+            font-weight: bolder;
+            color: #fff;
+        }
+
+        p {
+            font-size: 1.25rem;
+            color: #fff; // You can adjust the font size for better readability
+        }
+        .d-flex {
+            .btn-outline-light {
+                border: 5px solid;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+// Achievements Section
+.achievement-item {
+    transition: .5s;
+    overflow: hidden;
+
+    .achievement-img {
+        position: relative;
+
+        img {
+            transition: transform 0.5s ease;
+        }
+
+        &:hover img {
+            transform: scale(1.1); /* Slight zoom on hover */
+        }
+
+        .achievement-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(9, 30, 62, .7);
+            padding: 20px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease, bottom 0.5s ease;
+            p {
+                margin: 0;
+                font-size: 18px;
+                font-weight: bold;
+                color: #fff;
+                text-transform: uppercase;
+            }
+        }
+
+        &:hover .achievement-text {
+            opacity: 1;
+            bottom: 0; /* Slide in text from bottom */
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0 30px #DDDDDD;
+    }
+}
+
+
+// Plan
+.plan {
+    color: white;
+    
+    // Plan's own overlay (optional if needed)
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); // Dark transparent overlay
+        z-index: 0;
+    }
+
+    // Overlay for individual plan boxes
+    .plan-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3); // Slight overlay for plan
+        z-index: 1;
+    }
+
+    // Ensure the content appears above the overlay
+    .bg-transparent, .shadow {
+        z-index: 2;
+        position: relative; // Ensures it stacks correctly over the overlays
+    }
+
+    // Carousel adjustments to ensure proper functioning
+    #plansCarousel {
+        z-index: 3; // Bring the carousel above other overlays
+        position: relative;
+    }
+
+    .nav-tabs {
+        border-bottom: none!important;
+        .nav-link {
+            color: $white!important;
+            &{
+                color: $white!important;
+                background-color: transparent!important;
+            }
+        }
+    }
+
+    // Carousel controls
+    .carousel-control-prev, .carousel-control-next {
+        z-index: 4; // Ensure the controls are clickable and visible
+    }
+}
+
+
+
+/* Gallery */
+.gallery {
+    .box {
+        width: 350px;
+        overflow: hidden;
+        .slide-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            box-sizing: border-box;
+        }
+    }
+}
+
+/* Team */
+.team-item {
+    transition: .5s;
+
+    .team-social {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+
+        a.btn {
+            position: relative;
+            margin: 0 3px;
+            margin-top: 100px;
+            opacity: 0;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0 30px #DDDDDD;
+    }
+
+    &:hover .team-social {
+        background: rgba(9, 30, 62, .7);
+    }
+
+    &:hover .team-social a.btn {
+        opacity: 1;
+        margin-top: 0;
+        transition: .3s;
+    }
+
+    &:hover .team-social a.btn:nth-child(2) {
+        transition-delay: .05s;
+    }
+
+    &:hover .team-social a.btn:nth-child(3) {
+        transition-delay: .1s;
+    }
+
+    &:hover .team-social a.btn:nth-child(4) {
+        transition-delay: .15s;
+    }
+}
+
+/* Testimonial */
+.testimonial-carousel{
+    .owl-dots {
+        margin-top: 15px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .owl-dot {
+        position: relative;
+        display: inline-block;
+        margin: 0 5px;
+        width: 15px;
+        height: 15px;
+        background: #DDDDDD;
+        border-radius: 2px;
+        transition: .5s;
+        &.active {
+            width: 30px;
+            background: $theme;
+        }
+    }
+    .owl-item.center {
+        position: relative;
+        z-index: 1;
+    }
+    .owl-item .testimonial-item {
+        transition: .5s;
+    }
+    .owl-item.center .testimonial-item {
+        background: #FFFFFF;
+        box-shadow: 0 0 20px #DDDDDD;
+    }
+}
+
+// Footer Section
+.footer_section {
+    width: 100%;
+    float: left;
+    background-image: url('/img/footer-bg.png');
+    height: auto;
+    padding-top: 250px;
+    background-size: 100% 100%;
+    padding-bottom: 30px;
+    background-repeat: no-repeat;
+    color: white;
+
+    // Location and Contact Icons
+    .location_main {
+        .call_text {
+            text-align: center;
+            font-size: 18px;
+
+            a {
+                color: #ffffff;
+                text-decoration: none;
+
+                &:hover {
+                    color: $theme; /* Theme color */
+                }
+            }
+
+            i {
+                font-size: 36px; /* Increased icon size */
+                color: white;
+            }
+        }
+    }
+
+    // Social Icons
+    .social_icon {
+        ul {
+            padding-top: 20px;
+            text-align: center;
+            list-style: none;
+
+            li {
+                display: inline-block;
+                margin: 0 15px;
+
+                a {
+                    color: #ffffff;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: $theme;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Copyright Section
+.copyright_section {
+    width: 100%;
+    float: left;
+    background-color: #122c2d;
+    padding: 20px 0;
+
+    .copyright_text {
+        text-align: center;
+        font-size: 16px;
+        color: white;
+
+        a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid white;
+
+            &:hover {
+                color: $theme; /* Theme color */
+            }
+        }
+    }
+}
+  
+/* Media Queries */
+
+/* Smartphones and Tablets */
+@media (max-width: 991.98px) {
+    /* Sticky Navbar */
+    .sticky-top.navbar {
+        position: relative;
+        background: #FFFFFF;
+
+        .navbar-nav {
+            .nav-link {
+                padding: 10px 0;
+                color: $dark;
+            }
+        }
+    }
+
+    /* Navbar */
+    .navbar {
+        /* Navbar Brand */
+        .navbar-brand {
+            img {
+                width: 60px;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        /* Navbar Link */
+        .navbar-nav {
+            .nav-link {
+                &,
+                &.show {
+                    padding: 10px 0;
+                    color: $dark;
+                }
+            }
+        }
+    }
+
+    #banner {
+        height: 727px;
+        background-image: url('/img/mobile-bg.png')!important;
+
+        .banner-caption {
+            width: 100%;
+            top: 50%;
+            h1 {
+                font-size: 2.4rem; // Smaller font size for titles
+            }
+            p {
+                font-size: 1.3rem; // Smaller font size for paragraphs
+                line-height: 1.5;
+            }
+        }
+    }
+
+    #plansCarousel {
+        .border-bottom {
+            padding: 0.5rem!important;
+        }
+        .responsive-plan-space {
+            padding: 0.5rem!important;
+        }
+        .nav-tabs {
+            flex-direction: row;
+            flex-wrap: nowrap; /* Prevent wrapping */
+            justify-content: space-between; /* Spread tabs evenly */
+            overflow-x: auto; /* Allow scrolling if needed */
+            white-space: nowrap; /* Prevent text from wrapping */
+        }
+        
+        .nav-item {
+            flex: 1; /* Make each tab take up an equal amount of space */
+            margin: 0; /* Remove extra margins */
+            
+            .nav-link {
+                font-size: 0.875rem; /* Slightly smaller font size on mobile */
+                padding: 0.4rem; /* Adjust padding for better fit */
+            }
+        }
+    }
+
+    .footer_section {
+        background-image: url('/img/footer-mobile-bg.png')!important;
+    }
+}
+
+/* Desktops Only */
+@media (min-width: 992px) {
+    /* Comment out or remove the sticky navbar code below if you want to remove the sticky behavior from the navbar. */
+    .sticky-top.navbar {
+        position: fixed;
+        width: 100%;
+        background: #FFFFFF;
+    }
+
+    /* Comment out or remove the below navbar code if you want the carousel below the navbar */
+    .navbar {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid rgba(256, 256, 256, .1);
+        z-index: 999;
+    }
+
+   /* Gallery */
+    .gallery {
+        .box {
+            margin: -15px;
+        }
+    }
+
+    /* Facts Counter */
+    .facts {
+        position: relative;
+        margin-top: -75px;
+        z-index: 1;
+    }
+}
