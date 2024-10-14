@@ -305,10 +305,10 @@ a {
 
 /* Landing Page Start */
 
-/* Banner */
-#banner {
+/* Banner Desktop */
+#banner-desktop {
     position: relative;
-    height: 1000px; // Adjust height as needed
+    height: 1000px;
     overflow: hidden;
     background-size: cover;
     background-position: center;
@@ -320,7 +320,7 @@ a {
         left: 0;
         width: 100%;
         height: 100%;
-        // Dark semi-transparent background background: rgba(9, 30, 62, 0.2); 
+        /* background: rgba(9, 30, 62, 0.2); */
         z-index: 1;
     }
 
@@ -331,7 +331,7 @@ a {
         transform: translate(-50%, -50%);
         text-align: center;
         z-index: 2;
-        width: 80%; // Ensure it scales well on different screen sizes
+        width: 80%;
         padding: 0 15px;
 
         h1 {
@@ -342,16 +342,63 @@ a {
 
         p {
             font-size: 1.25rem;
-            color: #fff; // You can adjust the font size for better readability
+            color: #fff;
         }
-        .d-flex {
-            .btn-outline-light {
-                border: 5px solid;
-                font-size: 1.4rem;
-            }
+
+        .d-flex .btn-outline-light {
+            border: 5px solid;
+            font-size: 1.4rem;
         }
     }
 }
+
+/* Banner Mobile */
+#banner-mobile {
+    height: 727px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* background: rgba(9, 30, 62, 0.2); */ 
+        z-index: 1;
+    }
+
+    .banner-caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 2;
+        width: 100%;
+        padding: 0 15px;
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: bolder;
+            color: #fff;
+        }
+
+        p {
+            font-size: 1.3rem;
+            color: #fff;
+            line-height: 1.5;
+        }
+
+        .d-flex .btn-outline-light {
+            border: 3px solid;
+            font-size: 1.2rem;
+        }
+    }
+}
+
 
 // Achievements Section
 .achievement-item {
@@ -555,41 +602,37 @@ a {
     }
 }
 
-// Footer Section
-.footer_section {
+// Footer Section for Desktop
+#footer-desktop {
     width: 100%;
-    float: left;
-    background-image: url('/img/footer-bg.png');
-    height: auto;
-    padding-top: 250px;
-    background-size: 100% 100%;
-    padding-bottom: 30px;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    padding-top: 400px;
+    padding-bottom: 30px;
     color: white;
 
-    // Location and Contact Icons
     .location_main {
         .call_text {
             text-align: center;
             font-size: 18px;
 
             a {
-                color: #ffffff;
+                color: white;
                 text-decoration: none;
 
                 &:hover {
-                    color: $theme; /* Theme color */
+                    color: $theme; // Replace with your theme color
                 }
             }
 
             i {
-                font-size: 36px; /* Increased icon size */
+                font-size: 36px; // Icon size
                 color: white;
             }
         }
     }
 
-    // Social Icons
     .social_icon {
         ul {
             padding-top: 20px;
@@ -601,11 +644,65 @@ a {
                 margin: 0 15px;
 
                 a {
-                    color: #ffffff;
+                    color: white;
                     transition: color 0.3s ease;
 
                     &:hover {
-                        color: $theme;
+                        color: $theme; // Replace with your theme color
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Footer Section for Mobile
+#footer-mobile {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 150px;
+    padding-bottom: 30px;
+    color: white;
+
+    .location_main {
+        .call_text {
+            text-align: center;
+            font-size: 18px;
+
+            a {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    color: $theme; // Replace with your theme color
+                }
+            }
+
+            i {
+                font-size: 36px; // Icon size
+                color: white;
+            }
+        }
+    }
+
+    .social_icon {
+        ul {
+            padding-top: 20px;
+            text-align: center;
+            list-style: none;
+
+            li {
+                display: inline-block;
+                margin: 0 15px;
+
+                a {
+                    color: white;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: $theme; // Replace with your theme color
                     }
                 }
             }
@@ -616,7 +713,6 @@ a {
 // Copyright Section
 .copyright_section {
     width: 100%;
-    float: left;
     background-color: #122c2d;
     padding: 20px 0;
 
@@ -631,11 +727,12 @@ a {
             border-bottom: 1px solid white;
 
             &:hover {
-                color: $theme; /* Theme color */
+                color: $theme; // Replace with your theme color
             }
         }
     }
 }
+
   
 /* Media Queries */
 
@@ -676,23 +773,6 @@ a {
         }
     }
 
-    #banner {
-        height: 727px;
-        background-image: url('/img/mobile-bg.png')!important;
-
-        .banner-caption {
-            width: 100%;
-            top: 50%;
-            h1 {
-                font-size: 2.4rem; // Smaller font size for titles
-            }
-            p {
-                font-size: 1.3rem; // Smaller font size for paragraphs
-                line-height: 1.5;
-            }
-        }
-    }
-
     #plansCarousel {
         .border-bottom {
             padding: 0.5rem!important;
@@ -717,10 +797,6 @@ a {
                 padding: 0.4rem; /* Adjust padding for better fit */
             }
         }
-    }
-
-    .footer_section {
-        background-image: url('/img/footer-mobile-bg.png')!important;
     }
 }
 

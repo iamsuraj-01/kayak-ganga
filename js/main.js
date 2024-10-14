@@ -132,7 +132,12 @@
 
     // Water Ripple Effect
     $(document).ready(function() {
-        $('#banner').ripples({
+        $('#banner-desktop').ripples({
+            resolution: 512,
+            dropRadius: 20,
+            perturbance: 0.04,
+        });
+        $('#banner-mobile').ripples({
             resolution: 512,
             dropRadius: 20,
             perturbance: 0.04,
