@@ -118,11 +118,45 @@
             dropRadius: 20,
             perturbance: 0.04,
         });
-        // Apply ripple effect to plan section
-        $('.plan').ripples({
-            resolution: 512,
-            dropRadius: 20,
-            perturbance: 0.04,
+    });
+
+    $(document).ready(function() {
+        // Contact Form Submission
+        $("#contactForm").on("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            // Get form field values
+            const fullName = $("#fullName").val();
+            const email = $("#email").val();
+            const gender = $("#gender").val();
+            const packageSelected = $("#package").val();
+            const message = $("#message").val(); // Optional message field
+    
+            // Create an array for the message lines
+            const messageLines = [
+                `Contact Request:`,
+                `Name: ${fullName}`,
+                `Email: ${email}`,
+                `Gender: ${gender}`,
+                `Selected Package: ${packageSelected}`,
+                `Message: ${message ? message : 'No message provided'}`
+            ];
+    
+            // Join the message lines with line breaks
+            const messageText = messageLines.join('\n');
+    
+            // Detect if the user is on mobile or desktop
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            const whatsappUrl = isMobile 
+                ? `https://wa.me/918755576691?text=${encodeURIComponent(messageText)}`  // Mobile link
+                : `https://web.whatsapp.com/send?phone=918755576691&text=${encodeURIComponent(messageText)}`; // WhatsApp Web link
+    
+            // Open WhatsApp link
+            window.open(whatsappUrl, '_blank');
+    
+            // Show Thank You Modal after submission
+            $("#contactModal").modal('hide');  // Hide the contact modal
+            $("#thankYouModal").modal('show'); // Show the thank you modal
         });
     });
     

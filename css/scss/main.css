@@ -402,6 +402,7 @@ a {
 
 .plan {
   color: white;
+  /* Ensure the "Contact Us" button is visible above other elements */
 }
 .plan::before {
   content: "";
@@ -442,6 +443,14 @@ a {
 }
 .plan .carousel-control-prev, .plan .carousel-control-next {
   z-index: 4;
+}
+.plan .contact-us-button {
+  z-index: 5; /* Higher than overlays and other elements */
+  position: relative; /* Ensures it stacks correctly */
+}
+.plan .modal {
+  z-index: 1050; /* Bootstrap's default for modals to ensure it's above other elements */
+  position: fixed;
 }
 
 /* Gallery */

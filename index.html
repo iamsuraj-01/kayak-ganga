@@ -320,7 +320,7 @@
 				<!-- Desktop View (Show for large screens) -->
 				<div class="row g-4 d-none d-lg-flex">
 					<!-- Package 1: Kayak Training -->
-					<div class="col-lg-4 wow slideInUp position-relative" data-wow-delay="0.6s">
+					<div class="col-lg-6 wow slideInUp position-relative" data-wow-delay="0.6s">
 						<div class="plan-overlay"></div>
 						<div class="bg-transparent rounded position-relative p-5">
 							<div class="border-bottom py-4 px-5 mb-4">
@@ -334,14 +334,15 @@
 								<div class="d-flex justify-content-between mb-3"><span>Professional Coaching</span><i class="fa fa-check text-theme pt-1"></i></div>
 								<div class="d-flex justify-content-between mb-3"><span>Kayak & Gear Included</span><i class="fa fa-check text-theme pt-1"></i></div>
 								<div class="d-flex justify-content-between mb-3"><span>Safety Equipment</span><i class="fa fa-check text-theme pt-1"></i></div>
-								<div class="d-flex justify-content-between mb-2"><span>Meal Included</span><i class="fa fa-check text-theme pt-1"></i></div>
-								<a href="" class="btn hover-fill btn-theme py-2 px-4 mt-4">Contact Us</a>
+								<div class="d-flex justify-content-between mb-3"><span>Meal Included</span><i class="fa fa-check text-theme pt-1"></i></div>
+								<!-- New feature added: GoPro footage -->
+								<div class="d-flex justify-content-between mb-2"><span>GoPro Footage</span><i class="fa fa-check text-theme pt-1"></i></div>
 							</div>
 						</div>
 					</div>
 
 					<!-- Package 2: Rafting Adventure with Tabs -->
-					<div class="col-lg-4 wow slideInUp position-relative" data-wow-delay="0.3s">
+					<div class="col-lg-6 wow slideInUp position-relative" data-wow-delay="0.3s">
 						<div class="plan-overlay"></div>
 						<div class="bg-transparent rounded shadow position-relative p-5" style="z-index: 1;">
 							<div class="border-bottom py-4 px-5 mb-4">
@@ -376,7 +377,6 @@
 										<div class="d-flex justify-content-between mb-3"><span>Ganga River Rapids</span><i class="fa fa-check text-theme pt-1"></i></div>
 										<div class="d-flex justify-content-between mb-3"><span>Experienced Guide</span><i class="fa fa-check text-theme pt-1"></i></div>
 										<div class="d-flex justify-content-between mb-3"><span>Rafting Gear Included</span><i class="fa fa-check text-theme pt-1"></i></div>
-										<a href="" class="btn hover-fill btn-theme py-2 px-4 mt-4">Contact Us</a>
 									</div>
 								</div>
 
@@ -389,7 +389,6 @@
 										<div class="d-flex justify-content-between mb-3"><span>Ganga River Rapids</span><i class="fa fa-check text-theme pt-1"></i></div>
 										<div class="d-flex justify-content-between mb-3"><span>Experienced Guide</span><i class="fa fa-check text-theme pt-1"></i></div>
 										<div class="d-flex justify-content-between mb-3"><span>Rafting Gear Included</span><i class="fa fa-check text-theme pt-1"></i></div>
-										<a href="" class="btn hover-fill btn-theme py-2 px-4 mt-4">Contact Us</a>
 									</div>
 								</div>
 
@@ -402,7 +401,6 @@
 										<div class="d-flex justify-content-between mb-3"><span>Ganga River Rapids</span><i class="fa fa-check text-theme pt-1"></i></div>
 										<div class="d-flex justify-content-between mb-3"><span>Experienced Guide</span><i class="fa fa-check text-theme pt-1"></i></div>
 										<div class="d-flex justify-content-between mb-3"><span>Rafting Gear Included</span><i class="fa fa-check text-theme pt-1"></i></div>
-										<a href="" class="btn hover-fill btn-theme py-2 px-4 mt-4">Contact Us</a>
 									</div>
 								</div>
 
@@ -416,14 +414,14 @@
 										<div class="d-flex justify-content-between mb-3"><span>Experienced Guide</span><i class="fa fa-check text-theme pt-1"></i></div>
 										<div class="d-flex justify-content-between mb-3"><span>Rafting Gear Included</span><i class="fa fa-check text-theme pt-1"></i></div>
 										<div class="d-flex justify-content-between mb-2"><span>Meal Included</span><i class="fa fa-check text-theme pt-1"></i></div>
-										<a href="" class="btn hover-fill btn-theme py-2 px-4 mt-4">Contact Us</a>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-
-					<!-- Package 3: Expedition Planning -->
+					
+					<!-- Commenting out Package 3: Expedition Planning -->
+					<!-- 
 					<div class="col-lg-4 wow slideInUp position-relative" data-wow-delay="0.9s">
 						<div class="plan-overlay"></div>
 						<div class="bg-transparent rounded position-relative p-5">
@@ -439,8 +437,15 @@
 								<div class="d-flex justify-content-between mb-3"><span>Group Discounts</span><i class="fa fa-check text-theme pt-1"></i></div>
 								<div class="d-flex justify-content-between mb-3"><span>Safety & Logistics</span><i class="fa fa-check text-theme pt-1"></i></div>
 								<div class="d-flex justify-content-between mb-2"><span>Equipment Provided</span><i class="fa fa-check text-theme pt-1"></i></div>
-								<a href="" class="btn hover-fill btn-theme py-2 px-4 mt-4">Contact Us</a>
 							</div>
+						</div>
+					</div>
+					-->
+
+					<!-- Single Contact Us Button in the center (works for both desktop and mobile) -->
+					<div class="row g-4 d-flex justify-content-center contact-us-button">
+						<div class="col-lg-12 text-center mt-5">
+							<button class="btn hover-fill btn-theme py-3 px-5" data-bs-toggle="modal" data-bs-target="#contactModal">Send Inquiry</button>
 						</div>
 					</div>
 				</div>
@@ -463,11 +468,13 @@
 									<div class="d-flex justify-content-between mb-3"><span>Professional Coaching</span><i class="fa fa-check text-theme pt-1"></i></div>
 									<div class="d-flex justify-content-between mb-3"><span>Kayak & Gear Included</span><i class="fa fa-check text-theme pt-1"></i></div>
 									<div class="d-flex justify-content-between mb-3"><span>Safety Equipment</span><i class="fa fa-check text-theme pt-1"></i></div>
-									<div class="d-flex justify-content-between mb-2"><span>Meal Included</span><i class="fa fa-check text-theme pt-1"></i></div>
-									<a href="" class="btn hover-fill btn-theme py-2 px-4 mt-4">Contact Us</a>
+									<div class="d-flex justify-content-between mb-3"><span>Meal Included</span><i class="fa fa-check text-theme pt-1"></i></div>
+									<!-- New feature added: GoPro footage -->
+									<div class="d-flex justify-content-between mb-2"><span>GoPro Footage</span><i class="fa fa-check text-theme pt-1"></i></div>
 								</div>
 							</div>
 						</div>
+
 						<!-- Slide 2: Rafting Adventure with Tabs for Mobile View -->
 						<div class="carousel-item">
 							<div class="plan-overlay"></div>
@@ -504,7 +511,6 @@
 											<div class="d-flex justify-content-between mb-3"><span>Ganga River Rapids</span><i class="fa fa-check text-theme pt-1"></i></div>
 											<div class="d-flex justify-content-between mb-3"><span>Experienced Guide</span><i class="fa fa-check text-theme pt-1"></i></div>
 											<div class="d-flex justify-content-between mb-3"><span>Rafting Gear Included</span><i class="fa fa-check text-theme pt-1"></i></div>
-											<a href="" class="btn hover-fill btn-theme py-2 px-4 mt-4">Contact Us</a>
 										</div>
 									</div>
 
@@ -517,7 +523,6 @@
 											<div class="d-flex justify-content-between mb-3"><span>Ganga River Rapids</span><i class="fa fa-check text-theme pt-1"></i></div>
 											<div class="d-flex justify-content-between mb-3"><span>Experienced Guide</span><i class="fa fa-check text-theme pt-1"></i></div>
 											<div class="d-flex justify-content-between mb-3"><span>Rafting Gear Included</span><i class="fa fa-check text-theme pt-1"></i></div>
-											<a href="" class="btn hover-fill btn-theme py-2 px-4 mt-4">Contact Us</a>
 										</div>
 									</div>
 
@@ -530,7 +535,6 @@
 											<div class="d-flex justify-content-between mb-3"><span>Ganga River Rapids</span><i class="fa fa-check text-theme pt-1"></i></div>
 											<div class="d-flex justify-content-between mb-3"><span>Experienced Guide</span><i class="fa fa-check text-theme pt-1"></i></div>
 											<div class="d-flex justify-content-between mb-3"><span>Rafting Gear Included</span><i class="fa fa-check text-theme pt-1"></i></div>
-											<a href="" class="btn hover-fill btn-theme py-2 px-4 mt-4">Contact Us</a>
 										</div>
 									</div>
 
@@ -544,7 +548,6 @@
 											<div class="d-flex justify-content-between mb-3"><span>Experienced Guide</span><i class="fa fa-check text-theme pt-1"></i></div>
 											<div class="d-flex justify-content-between mb-3"><span>Rafting Gear Included</span><i class="fa fa-check text-theme pt-1"></i></div>
 											<div class="d-flex justify-content-between mb-2"><span>Meal Included</span><i class="fa fa-check text-theme pt-1"></i></div>
-											<a href="" class="btn hover-fill btn-theme py-2 px-4 mt-4">Contact Us</a>
 										</div>
 									</div>
 								</div>
@@ -561,7 +564,8 @@
 							</div>
 						</div>
 
-						<!-- Slide 3: Expedition Planning -->
+						<!-- Commenting out Package 3: Expedition Planning for Mobile -->
+						<!-- 
 						<div class="carousel-item">
 							<div class="plan-overlay"></div>
 							<div class="bg-transparent rounded position-relative p-5">
@@ -577,22 +581,82 @@
 									<div class="d-flex justify-content-between mb-3"><span>Group Discounts</span><i class="fa fa-check text-theme pt-1"></i></div>
 									<div class="d-flex justify-content-between mb-3"><span>Safety & Logistics</span><i class="fa fa-check text-theme pt-1"></i></div>
 									<div class="d-flex justify-content-between mb-2"><span>Equipment Provided</span><i class="fa fa-check text-theme pt-1"></i></div>
-									<a href="" class="btn hover-fill btn-theme py-2 px-4 mt-4">Contact Us</a>
 								</div>
 							</div>
 						</div>
+						-->
 					</div>
-
-					<!-- Carousel Controls -->
-					<button class="carousel-control-prev" type="button" data-bs-target="#plansCarousel" data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#plansCarousel" data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
+					<!-- Single Contact Us Button in the center (works for both desktop and mobile) -->
+					<div class="row g-4 d-flex justify-content-center contact-us-button">
+						<div class="col-lg-12 text-center mt-5">
+							<button class="btn hover-fill btn-theme py-3 px-5" data-bs-toggle="modal" data-bs-target="#contactModal">Send Inquiry</button>
+						</div>
+					</div>
 				</div>
+
+				<!-- Modal for Contact Form -->
+				<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title text-dark" id="contactModalLabel">Send Inquiry</h5> <!-- Ensure modal title is visible -->
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<form id="contactForm">
+									<div class="mb-3">
+										<label for="fullName" class="form-label">Full Name</label>
+										<input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+									</div>
+									<div class="mb-3">
+										<label for="email" class="form-label">Email</label>
+										<input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+									</div>
+									<div class="mb-3">
+										<label for="gender" class="form-label">Gender</label>
+										<select class="form-select" id="gender" required>
+											<option value="" disabled selected>Select your gender</option>
+											<option value="Male">Male</option>
+											<option value="Female">Female</option>
+											<option value="Other">Other</option>
+										</select>
+									</div>
+									<div class="mb-3">
+										<label for="package" class="form-label">Select Package</label>
+										<select class="form-select" id="package" required>
+											<option value="" disabled selected>Select a package</option>
+											<option value="Kayak Training">Kayak Training</option>
+											<option value="Rafting Adventure 12km">Rafting Adventure 12km</option>
+											<option value="Rafting Adventure 16km">Rafting Adventure 16km</option>
+											<option value="Rafting Adventure 26km">Rafting Adventure 26km</option>
+											<option value="Rafting Adventure 35km">Rafting Adventure 35km</option>
+										</select>
+									</div>
+									<div class="mb-3">
+										<label for="message" class="form-label">Message</label>
+										<textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+									</div>
+									<button type="submit" class="btn btn-primary">Submit</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Thank You Modal -->
+				<div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-body text-dark">
+								Thank you for contacting us. We will get back to you shortly!
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-theme" data-bs-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 
@@ -795,19 +859,20 @@
 							</div>
 							<div class="ps-4">
 								<h5 class="mb-2">Call for inquiries</h5>
-								<h4 class="text-theme mb-0">+91 98765 43210</h4>
+								<h4 class="text-theme mb-0">+91 8755576691, +91 9119772631</h4>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-6  wow zoomIn" data-wow-delay="0.9s">
 						<!-- Embed a Google Maps iframe for a random location in India -->
-						<iframe 
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.0928261120587!2d80.27675581503615!3d26.447521983342384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c3866c5b5ffb7%3A0x8c5f846e2de57ff2!2sLucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1638446706815!5m2!1sen!2sin" 
-							width="100%" 
-							height="450" 
-							style="border:0;" 
-							allowfullscreen="" 
-							loading="lazy">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.3968786015854!2d78.32406351548705!3d30.122906581830055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929a280000001%3A0x28d9006b097cda3e!2sTapovan%2C%20Rishikesh%2C%20Uttarakhand%20249601%2C%20India!5e0!3m2!1sen!2sin!4v1697466400000!5m2!1sen!2sin"
+							width="100%"
+							height="450"
+							style="border:0;"
+							allowfullscreen=""
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade">
 						</iframe>
 					</div>
 				</div>
@@ -821,7 +886,10 @@
 				<div class="location_main mb-4">
 					<div class="call_text mb-2">
 						<i class="fas fa-phone fa-2x text-white"></i>
-						<p class="mt-2">Call <a href="tel:+918755576691" class="text-white">+91 8755576691</a></p>
+						<p class="mt-2">Call
+							<a href="tel:+918755576691" class="text-white">+918755576691</a>,
+							<a href="tel:+919119772631" class="text-white">+919119772631</a>
+						</p>
 					</div>
 					<div class="call_text mb-2">
 						<i class="fas fa-envelope fa-2x text-white"></i>
@@ -859,7 +927,10 @@
 				<div class="location_main mb-4">
 					<div class="call_text mb-2">
 						<i class="fas fa-phone fa-2x text-white"></i>
-						<p class="mt-2">Call <a href="tel:+918755576691" class="text-white">+91 8755576691</a></p>
+						<p class="mt-2">Call
+							<a href="tel:+918755576691" class="text-white">+918755576691</a>
+							<a href="tel:+919119772631" class="text-white">+919119772631</a>
+						</p>
 					</div>
 					<div class="call_text mb-2">
 						<i class="fas fa-envelope fa-2x text-white"></i>

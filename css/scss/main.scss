@@ -501,6 +501,18 @@ a {
     .carousel-control-prev, .carousel-control-next {
         z-index: 4; // Ensure the controls are clickable and visible
     }
+
+    /* Ensure the "Contact Us" button is visible above other elements */
+    .contact-us-button {
+        z-index: 5; /* Higher than overlays and other elements */
+        position: relative; /* Ensures it stacks correctly */
+    }
+
+    // Ensure modals appear above everything else
+    .modal {
+        z-index: 1050; /* Bootstrap's default for modals to ensure it's above other elements */
+        position: fixed;
+    }
 }
 
 /* Gallery */
