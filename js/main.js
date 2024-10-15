@@ -129,7 +129,7 @@
             const fullName = $("#fullName").val();
             const email = $("#email").val();
             const gender = $("#gender").val();
-            const packageSelected = $("#package").val();
+            const packageSelected = $("#packageSelect").val();
             const message = $("#message").val(); // Optional message field
     
             // Debug check for packageSelected
