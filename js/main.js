@@ -132,9 +132,12 @@
             const packageSelected = $("#package").val();
             const message = $("#message").val(); // Optional message field
     
+            // Debug check for packageSelected
+            console.log('Selected package:', packageSelected); 
+    
             // Create an array for the message lines
             const messageLines = [
-                `Contact Request:`,
+                `Package Request:`, // Update this to "Package Request"
                 `Name: ${fullName}`,
                 `Email: ${email}`,
                 `Gender: ${gender}`,
@@ -158,7 +161,7 @@
             $("#contactModal").modal('hide');  // Hide the contact modal
             $("#thankYouModal").modal('show'); // Show the thank you modal
         });
-    });
+    });    
     
 })(jQuery);
 
